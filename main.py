@@ -19,7 +19,7 @@ if kps is None or sign is None or vcode is None:
 # 邮箱通知
 SMTP_SERVER = os.getenv("SMTP_SERVER")
 SMTP_PORT = os.getenv("SMTP_PORT", default=25)  # 587 TLS 端口，使用 465 代表 SSL
-EMAIL = os.getenv("EMAIL")  # 你的邮箱
+EMAIL = os.getenv("Liujianxre@163.com")  # 你的邮箱
 PASSWORD = os.getenv("PASSWORD")  # 你的 SMTP 授权码（不是邮箱密码）
 
 # 测试环境
@@ -131,9 +131,9 @@ def checkin():
     querystring = {
         "pr": "ucpro",
         "fr": "android",
-        "kps": kps,
-        "sign": sign,
-        "vcode": vcode,
+        "kps": "AATJ+VfFIL9DuZpbUn0XRLtwQO/k0hmzsvmFR30D1xZUlgkqCArAyu3uwFBwVcBDz7bo4x3GXMFiD+n0wegDZATRDEAgWuCWg5XhIPIMfGR01Q==",
+        "sign": "AASqKFFHzgJVl4YRz70xDlGu05OQk1bOwaycFoZuKRkpNs1LfT1qarsKwptvWFuf3bg=",
+        "vcode": "1759674083717",
     }
     response = httpx.post(url=url, json={"sign_cyclic": True}, params=querystring)
     if response.status_code == 200:
